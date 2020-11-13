@@ -1,0 +1,20 @@
+syntax = "proto3";
+package dealer;
+
+import "github.com/cargod-bj/b2c-proto-common/common/common.proto";
+
+option go_package = "github.com/cargod-bj/b2c-sms-api/sms";
+
+service Sms {
+  rpc SendNormalSms(SmsDto) returns (common.Response) {}
+  rpc SendTempleteSms(SmsDto) returns (common.Response) {}
+}
+
+message SmsDto{
+  string phone = 1;
+  string content = 2;
+  string from = 3;
+  uint64 templeteId = 4;
+  //使用模板时要替换的参数
+  repeated string param = 5;
+}
