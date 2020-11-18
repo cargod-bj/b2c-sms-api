@@ -18,4 +18,5 @@ message SmsDto{
   //使用模板时要替换的参数
   repeated string param = 5;
   string countryPrefix = 6;
+  string url = 7;
 }
