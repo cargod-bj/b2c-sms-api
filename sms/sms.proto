@@ -19,4 +19,5 @@ message SmsDto{
   repeated string param = 5;
   string countryPrefix = 6;
   string url = 7;
+  string code = 8; //编码
 }
